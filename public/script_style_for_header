@@ -1,0 +1,58 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+.title-input.page-title input[type=text]{background:#44475a}
+.floating-toolbox div[toolbox-tab-content]{background-color:#282a36}
+html.dark-mode .card.drag-card{background-color:#44475a}
+html.dark-mode .card.drag-card .handle{background-color:#44475a}
+.card.drag-card .outline input{background-color:#282a36;color:#f8f8f2}
+#header{background-color:#282a36!important}
+html.dark-mode .fake-input,html.dark-mode .input-base,html.dark-mode input[type=color],html.dark-mode input[type=date],html.dark-mode input[type=email],html.dark-mode input[type=number],html.dark-mode input[type=password],html.dark-mode input[type=search],html.dark-mode input[type=text],html.dark-mode input[type=url],html.dark-mode select,html.dark-mode textarea{color:#f8f8f2;background-color:#44475a}
+html.dark-mode{background-color:#282a36}
+html.dark-mode .card{background-color:#22242f}
+html.dark-mode body{color:#6272a4;background-color:transparent}
+.markdown-editor-display{background-color:#282a36!important}
+html.markdown-editor-display.dark-mode body{background-color:#282a36}
+.logo-text{color:var(--color-primary)!important}
+html.dark-mode code{background-color:#44475a}
+html.dark-mode pre{background-color:#44475a}
+.title-input.page-title input[type=text]{background:#44475a}
+html.dark-mode .editor-toolbar{background-color:#282a36}
+html.dark-mode .primary-background-light{background:#282a36}
+</style>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/theme/dracula.min.css"/>
+<script>window.codeTheme='dracula';</script>
+<script>
+// ** automatic dark-mode
+  var root = document.getElementsByTagName( 'html' )[0]; //Get (first) html element
+  //on page-ready
+  document.addEventListener('DOMContentLoaded', function() {
+    //switch to mode on page-load
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+
+    //hide theme-selector switches
+    //Drop-Down menu
+    var drop_menu = document.getElementsByClassName('dropdown-menu')[0];
+    drop_menu.removeChild(drop_menu.lastElementChild); //mode selector
+    drop_menu.removeChild(drop_menu.lastChild.previousElementSibling); //hr
+
+    //side-menu
+    var side_menu = document.querySelector('form[action="http://localhost:8000/settings/users/toggle-dark-mode"]');     //mode selector
+    if (side_menu !== null) {
+      side_menu.remove(); 
+    }
+  }, false);
+
+  //on mode-switch event from OS
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (e.matches) {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+  });
+</script>

@@ -26,6 +26,10 @@
     @include('common.custom-styles')
     @include('common.custom-head')
 
+    <!-- custom css -->
+    <link rel="stylesheet" href="{{ url('/') }}/css/custom.css">
+    <!-- <link rel="stylesheet" href="{{ url('/') }}/css/dark-theme.css"> -->
+
     @stack('head')
 
     <!-- Translations for JS -->
