@@ -11,7 +11,7 @@ return [
 
     // Login & Register
     'sign_up' => 'Daftar',
-    'log_in' => 'Gabung',
+    'log_in' => 'Login',
     'log_in_with' => 'Masuk dengan :socialDriver',
     'sign_up_with' => 'Daftar dengan :socialDriver',
     'logout' => 'Keluar',
