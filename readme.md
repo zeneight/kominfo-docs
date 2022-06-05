@@ -1,7 +1,6 @@
 ## kominfo-docs
 
-Sistem Dokumentasi & Informasi mengenai Istilah, aplikasi, sistem dan lainnya yang ada di Kominfo Denpasar.
-
+Sistem Dokumentasi & Informasi mengenai Istilah, aplikasi, sistem dan lainnya.
 ### Stacks
 
 - Laravel 8.83.2
