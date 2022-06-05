@@ -4,6 +4,7 @@ Sistem Dokumentasi & Informasi mengenai Istilah, aplikasi, sistem dan lainnya.
 ### Stacks
 
 - Laravel 8.83.2
+- Bookstack
 
 ### Installation
 
